@@ -20,7 +20,7 @@ import AppSearch from './AppSearch';
 import { getTradePageUrl } from '../utils/markets';
 
 const Wrapper = styled.div`
-  background-color: #0d1017;
+  background-color: #41034E;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  color: #2abdd2;
+  color: #D55FEF;
   font-weight: bold;
   cursor: pointer;
   img {
@@ -40,13 +40,12 @@ const LogoWrapper = styled.div`
 `;
 
 const EXTERNAL_LINKS = {
-  '/learn': 'https://serum-academy.com/en/serum-dex/',
-  '/add-market': 'https://serum-academy.com/en/add-market/',
+  '/home': 'https:crazyapecoin.com/',
+  '/form': 'https://bit.ly/cape-dex',
   '/wallet-support': 'https://serum-academy.com/en/wallet-support',
   '/dex-list': 'https://serum-academy.com/en/dex-list/',
-  '/developer-resources': 'https://serum-academy.com/en/developer-resources/',
-  '/explorer': 'https://explorer.solana.com',
-  '/srm-faq': 'https://projectserum.com/srm-faq',
+  '/crazy-city': 'https://city.crazyapecoin.com/',
+  '/explorer': 'https://solanabeach.io/token/GpYMp8eP3HADY8x1jLVfFVBVYqxFNxT5mFhZAZt9Poco',
   '/swap': 'https://swap.projectserum.com',
 };
 
@@ -192,28 +191,28 @@ export default function TopBar() {
           )}
           {!searchFocussed && (
             <Menu.SubMenu
-              title="LEARN"
+              title="MORE"
               onTitleClick={() =>
-                window.open(EXTERNAL_LINKS['/learn'], '_blank')
+                window.open(EXTERNAL_LINKS['/home'], '_blank')
               }
               style={{ margin: '0 0px 0 10px' }}
             >
-              <Menu.Item key="/add-market">
+              <Menu.Item key="/home">
                 <a
-                  href={EXTERNAL_LINKS['/add-market']}
+                  href={EXTERNAL_LINKS['/home']}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Adding a market
+                  Website
                 </a>
               </Menu.Item>
-              <Menu.Item key="/wallet-support">
+              <Menu.Item key="/form">
                 <a
-                  href={EXTERNAL_LINKS['/wallet-support']}
+                  href={EXTERNAL_LINKS['/form']}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Supported wallets
+                  List Your Token
                 </a>
               </Menu.Item>
               <Menu.Item key="/dex-list">
@@ -225,31 +224,13 @@ export default function TopBar() {
                   DEX list
                 </a>
               </Menu.Item>
-              <Menu.Item key="/developer-resources">
-                <a
-                  href={EXTERNAL_LINKS['/developer-resources']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Developer resources
-                </a>
-              </Menu.Item>
               <Menu.Item key="/explorer">
                 <a
                   href={EXTERNAL_LINKS['/explorer']}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Solana block explorer
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/srm-faq">
-                <a
-                  href={EXTERNAL_LINKS['/srm-faq']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  SRM FAQ
+                  Explorer
                 </a>
               </Menu.Item>
             </Menu.SubMenu>
@@ -277,7 +258,7 @@ export default function TopBar() {
           >
             <Col>
               <PlusCircleOutlined
-                style={{ color: '#2abdd2' }}
+                style={{ color: '#D55FEF' }}
                 onClick={() => setAddEndpointVisible(true)}
               />
             </Col>
@@ -288,7 +269,7 @@ export default function TopBar() {
                 title="URL"
                 trigger="hover"
               >
-                <InfoCircleOutlined style={{ color: '#2abdd2' }} />
+                <InfoCircleOutlined style={{ color: '#D55FEF' }} />
               </Popover>
             </Col>
             <Col>
