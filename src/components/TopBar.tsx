@@ -41,13 +41,11 @@ const LogoWrapper = styled.div`
 
 const EXTERNAL_LINKS = {
   '/learn': 'https://serum-academy.com/en/serum-dex/',
-  '/add-market': 'https://serum-academy.com/en/add-market/',
-  '/wallet-support': 'https://serum-academy.com/en/wallet-support',
-  '/dex-list': 'https://serum-academy.com/en/dex-list/',
-  '/developer-resources': 'https://serum-academy.com/en/developer-resources/',
-  '/explorer': 'https://solscan.io',
-  '/srm-faq': 'https://projectserum.com/srm-faq',
-  '/swap': 'https://swap.projectserum.com',
+  '/explorer': 'https://solanabeach.io/token/GpYMp8eP3HADY8x1jLVfFVBVYqxFNxT5mFhZAZt9Poco',
+  '/homepage': 'https://crazyapecoin.com',
+  '/crazy-city': 'https://city.crazyapecoin.com',
+  '/swap': 'https://swap.crazyapecoin.com',
+  '/form': 'https://bit.ly/cape-dex',
 };
 
 export default function TopBar() {
@@ -142,7 +140,7 @@ export default function TopBar() {
       <Wrapper>
         <LogoWrapper onClick={() => history.push(tradePageUrl)}>
           <img src={logo} alt="" />
-          {'CHEESESODA DEX'}
+          {'CAPE-DEX'}
         </LogoWrapper>
         <Menu
           mode="horizontal"
@@ -160,47 +158,58 @@ export default function TopBar() {
             TRADE
           </Menu.Item>
           {!searchFocussed && (
+            <Menu.Item key="/swap" style={{ margin: '0 10px' }}>
+              <a
+                href={EXTERNAL_LINKS['/swap']}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SWAP
+              </a>
+            </Menu.Item>
+          )}
+          {connected && (!searchFocussed || location.pathname === '/balances') && (
+            <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
+              BALANCES
+            </Menu.Item>
+          )}
+          {connected && (!searchFocussed || location.pathname === '/orders') && (
+            <Menu.Item key="/orders" style={{ margin: '0 10px' }}>
+              ORDERS
+            </Menu.Item>
+          )}
+          {connected && (!searchFocussed || location.pathname === '/convert') && (
+            <Menu.Item key="/convert" style={{ margin: '0 10px' }}>
+              CONVERT
+            </Menu.Item>
+          )}
+          {!searchFocussed && (
             <Menu.SubMenu
-              title="LEARN"
+              title="MORE"
               onTitleClick={() =>
                 window.open(EXTERNAL_LINKS['/learn'], '_blank')
               }
               style={{ margin: '0 0px 0 10px' }}
-            >
-              <Menu.Item key="/add-market">
-                <a
-                  href={EXTERNAL_LINKS['/add-market']}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  Adding a market
+                  Website
                 </a>
               </Menu.Item>
-              <Menu.Item key="/wallet-support">
+              <Menu.Item key="/homepage">
                 <a
-                  href={EXTERNAL_LINKS['/wallet-support']}
+                  href={EXTERNAL_LINKS['/homepage']}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Supported wallets
+                  Crazy City
                 </a>
               </Menu.Item>
-              <Menu.Item key="/dex-list">
+              <Menu.Item key="/crayz-city">
                 <a
-                  href={EXTERNAL_LINKS['/dex-list']}
+                  href={EXTERNAL_LINKS['/crazy-city']}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  DEX list
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/developer-resources">
-                <a
-                  href={EXTERNAL_LINKS['/developer-resources']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Developer resources
+                  Solana block explorer
                 </a>
               </Menu.Item>
               <Menu.Item key="/explorer">
@@ -209,16 +218,14 @@ export default function TopBar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Solana block explorer
+                  List Your Token
                 </a>
               </Menu.Item>
-              <Menu.Item key="/srm-faq">
+              <Menu.Item key="/form">
                 <a
-                  href={EXTERNAL_LINKS['/srm-faq']}
+                  href={EXTERNAL_LINKS['/form']}
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  SRM FAQ
                 </a>
               </Menu.Item>
             </Menu.SubMenu>
@@ -246,7 +253,7 @@ export default function TopBar() {
           >
             <Col>
               <PlusCircleOutlined
-                style={{ color: '#ff5252' }}
+                style={{ color: '#D55FEF' }}
                 onClick={() => setAddEndpointVisible(true)}
               />
             </Col>
@@ -257,7 +264,7 @@ export default function TopBar() {
                 title="URL"
                 trigger="hover"
               >
-                <InfoCircleOutlined style={{ color: '#ff5252' }} />
+                <InfoCircleOutlined style={{ color: '#D55FEF' }} />
               </Popover>
             </Col>
             <Col>
