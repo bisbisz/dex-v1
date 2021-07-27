@@ -11,7 +11,7 @@ const Title = styled.div`
 `;
 const SizeTitle = styled(Row)`
   padding: 20px 0 14px;
-  color: #434a59;
+  color: #ff8e44;
 `;
 
 export default function PublicTrades({ smallScreen }) {
@@ -30,7 +30,7 @@ export default function PublicTrades({ smallScreen }) {
             }
       }
     >
-      <Title>Recent Market trades</Title>
+      <Title>Recent Ape In</Title>
       <SizeTitle>
         <Col span={8}>Price ({quoteCurrency}) </Col>
         <Col span={8} style={{ textAlign: 'right' }}>
@@ -72,7 +72,7 @@ export default function PublicTrades({ smallScreen }) {
                     )
                   : trade.size}
               </Col>
-              <Col span={8} style={{ textAlign: 'right', color: '#434a59' }}>
+              <Col span={8} style={{ textAlign: 'right', color: '#ff8e44' }}>
                 {trade.time && new Date(trade.time).toLocaleTimeString()}
               </Col>
             </Row>
