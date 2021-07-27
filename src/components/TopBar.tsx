@@ -40,13 +40,13 @@ const LogoWrapper = styled.div`
 `;
 
 const EXTERNAL_LINKS = {
-  '/home': 'https:crazyapecoin.com/',
+  '/home': 'https://crazyapecoin.com/',
   '/form': 'https://bit.ly/cape-dex',
   '/wallet-support': 'https://serum-academy.com/en/wallet-support',
   '/dex-list': 'https://serum-academy.com/en/dex-list/',
   '/crazy-city': 'https://city.crazyapecoin.com/',
   '/explorer': 'https://solanabeach.io/token/GpYMp8eP3HADY8x1jLVfFVBVYqxFNxT5mFhZAZt9Poco',
-  '/swap': 'https://swap.projectserum.com',
+  '/swap': 'https://swap.crazyapecoin.com/',
 };
 
 export default function TopBar() {
@@ -182,11 +182,6 @@ export default function TopBar() {
           {connected && (!searchFocussed || location.pathname === '/convert') && (
             <Menu.Item key="/convert" style={{ margin: '0 10px' }}>
               CONVERT
-            </Menu.Item>
-          )}
-          {(!searchFocussed || location.pathname === '/list-new-market') && (
-            <Menu.Item key="/list-new-market" style={{ margin: '0 10px' }}>
-              ADD MARKET
             </Menu.Item>
           )}
           {!searchFocussed && (
