@@ -30,7 +30,7 @@ export default function PublicTrades({ smallScreen }) {
             }
       }
     >
-      <Title>Recent Ape In</Title>
+      <Title>Recent Market trades</Title>
       <SizeTitle>
         <Col span={8}>Price ({quoteCurrency}) </Col>
         <Col span={8} style={{ textAlign: 'right' }}>
