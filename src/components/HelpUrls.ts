@@ -1,4 +1,5 @@
 export const helpUrls = {
+  website: 'https://crazyapecoin.com',
   customerSupport: 'https://t.me/solcrazyape',
   contactEmail: 'hello@crazyapecoin.com',
   discord: 'https://discord.gg/Uj2ZMAXfpC',
