@@ -25,7 +25,6 @@ import CustomMarketDialog from '../components/CustomMarketDialog';
 import { notify } from '../utils/notifications';
 import { useHistory, useParams } from 'react-router-dom';
 import { nanoid } from 'nanoid';
-import { TVChartContainer } from '../components/TradingView';
 
 const { Option, OptGroup } = Select;
 
@@ -79,7 +78,7 @@ function TradePageInner() {
   });
 
   useEffect(() => {
-    document.title = marketName ? `${marketName} — cheesesodaDEX` : 'cheesesodaDEX';
+    document.title = marketName ? `${marketName} — CAPE DEX` : 'CAPE DEX';
   }, [marketName]);
 
   const changeOrderRef = useRef<
@@ -177,13 +176,13 @@ function TradePageInner() {
                 title="Market address"
                 trigger="click"
               >
-                <InfoCircleOutlined style={{ color: '#ff5252' }} />
+                <InfoCircleOutlined style={{ color: '#D55FEF' }} />
               </Popover>
             </Col>
           ) : null}
           <Col>
             <PlusCircleOutlined
-              style={{ color: '#ff5252' }}
+              style={{ color: '#D55FEF' }}
               onClick={() => setAddMarketVisible(true)}
             />
           </Col>
@@ -336,10 +335,8 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
         flexWrap: 'nowrap',
       }}
     >
-      <Col flex="auto" style={{ height: '50vh' }}>
-        <Row style={{ height: '100%' }}>
-          <TVChartContainer />
-        </Row>
+      <Col flex="auto" style={{ height: '100%', display: 'flex' }}>
+        <UserInfoTable />
         <Row style={{ height: '70%' }}>
           <UserInfoTable />
         </Row>
@@ -362,9 +359,6 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
 const RenderSmall = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
-      <Row style={{ height: '30vh' }}>
-        <TVChartContainer />
-      </Row>
       <Row
         style={{
           height: '900px',
@@ -401,9 +395,6 @@ const RenderSmall = ({ onChangeOrderRef, onPrice, onSize }) => {
 const RenderSmaller = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
-      <Row style={{ height: '50vh' }}>
-        <TVChartContainer />
-      </Row>
       <Row>
         <Col xs={24} sm={12} style={{ height: '100%', display: 'flex' }}>
           <TradeForm style={{ flex: 1 }} setChangeOrderRef={onChangeOrderRef} />
