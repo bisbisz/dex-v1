@@ -22,6 +22,7 @@ import LinkAddress from './LinkAddress';
 import {InfoCircleOutlined} from '@ant-design/icons';
 import {useInterval} from "../utils/useInterval";
 import {useLocalStorageState} from "../utils/utils";
+import { AUTO_SETTLE_DISABLED_OVERRIDE } from "../utils/preferences";
 
 const RowBox = styled(Row)`
   padding-bottom: 20px;
@@ -33,8 +34,8 @@ const Tip = styled.p`
 `;
 
 const ActionButton = styled(Button)`
-  color: #2abdd2;
-  background-color: #212734;
+  color: #D55FEF;
+  background-color: #860EA1;
   border-width: 0px;
 `;
 
@@ -121,7 +122,7 @@ export default function StandaloneBalancesDisplay() {
 
   useInterval(() => {
     const autoSettle = async () => {
-      if (!wallet || !market || !openOrdersAccount || !baseCurrencyAccount || !quoteCurrencyAccount || !autoSettleEnabled) {
+      if (AUTO_SETTLE_DISABLED_OVERRIDE || !wallet || !market || !openOrdersAccount || !baseCurrencyAccount || !quoteCurrencyAccount || !autoSettleEnabled) {
         return;
       }
       if (!baseCurrencyBalances?.unsettled && !quoteCurrencyBalances?.unsettled) {
@@ -189,7 +190,7 @@ export default function StandaloneBalancesDisplay() {
                   title="Token mint"
                   trigger="hover"
                 >
-                  <InfoCircleOutlined style={{ color: '#2abdd2' }} />
+                  <InfoCircleOutlined style={{ color: '#D55FEF' }} />
                 </Popover>
               )}
             </Divider>
