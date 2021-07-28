@@ -41,6 +41,7 @@ const LogoWrapper = styled.div`
 
 const EXTERNAL_LINKS = {
   '/home': 'https://crazyapecoin.com/',
+  '/nft': 'https://nft.crazyapecoin.com/',
   '/form': 'https://bit.ly/cape-dex',
   '/wallet-support': 'https://serum-academy.com/en/wallet-support',
   '/dex-list': 'https://serum-academy.com/en/dex-list/',
@@ -199,6 +200,15 @@ export default function TopBar() {
                   rel="noopener noreferrer"
                 >
                   Website
+                </a>
+              </Menu.Item>
+               <Menu.Item key="/nft">
+                <a
+                  href={EXTERNAL_LINKS['/nft']}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CAPE-NFT
                 </a>
               </Menu.Item>
               <Menu.Item key="/form">
