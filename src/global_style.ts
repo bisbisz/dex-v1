@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 html,body{
-  background: #1f0b3e;
+  background: #41034E;
 }
 input[type=number]::-webkit-inner-spin-button {
   opacity: 0;
@@ -17,51 +17,51 @@ input[type=number]:focus::-webkit-inner-spin-button {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d105a;
+  background: #D102FF;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5b5f67;
+  background: #D55FEF;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #5b5f67;
+  background: #D55FEF;
 }
 .ant-slider-track, .ant-slider:hover .ant-slider-track {
-  background-color: #ff5252;
+  background-color: #860EA1;
   opacity: 0.75;
 }
 .ant-slider-track,
 .ant-slider ant-slider-track:hover {
-  background-color: #ff5252;
+  background-color: #860EA1;
   opacity: 0.75;
 }
 .ant-slider-dot-active,
 .ant-slider-handle,
 .ant-slider-handle-click-focused,
 .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open)  {
-  border: 2px solid #ff5252; 
+  border: 2px solid #860EA1; 
 }
 .ant-table-tbody > tr.ant-table-row:hover > td {
-  background: #3b1477 !important;
+  background: #D55FEF !important;
 }
 .ant-table-tbody > tr > td {
-  border-bottom: 8px solid #280e4f;
+  border-bottom: 8px solid #41034E;
 }
 .ant-table-container table > thead > tr:first-child th {
   border-bottom: none;
 }
 .ant-divider-horizontal.ant-divider-with-text::before, .ant-divider-horizontal.ant-divider-with-text::after {
-  border-top: 1px solid #ff8e44 !important;
+  border-top: 1px solid #E495F5 !important;
 }
 .ant-layout {
-    background: #1f0b3e
+    background: #41034E
   }
   .ant-table {
-    background: #35126a;
+    background: #D102FF;
   }
   .ant-table-thead > tr > th {
-    background: #280e4f;
+    background: #860EA1;
   }
 .ant-select-item-option-content {
   img {
@@ -69,20 +69,20 @@ input[type=number]:focus::-webkit-inner-spin-button {
   }
 }
 .ant-modal-content {
-  background-color: #35126a;
+  background-color: #D102FF;
 }
 
 @-webkit-keyframes highlight {
-  from { background-color: #ff5252;}
-  to {background-color: #280e4f;}
+  from { background-color: #D55FEF;}
+  to {background-color: #41034E;}
 }
 @-moz-keyframes highlight {
-  from { background-color: #ff5252;}
-  to {background-color: #280e4f;}
+  from { background-color: #D55FEF;}
+  to {background-color: #41034E;}
 }
 @-keyframes highlight {
-  from { background-color: #ff5252;}
-  to {background-color: #280e4f;}
+  from { background-color: #D55FEF;}
+  to {background-color: #41034E;}
 }
 .flash {
   -moz-animation: highlight 0.5s ease 0s 1 alternate ;
