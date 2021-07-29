@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 html,body{
-  background: #D55FEF;
+  background: #5b056e;
 }
 input[type=number]::-webkit-inner-spin-button {
   opacity: 0;
@@ -17,33 +17,33 @@ input[type=number]:focus::-webkit-inner-spin-button {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #D102FF;
+  background: #7c1794;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #D55FEF;
+  background: #e18af4;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #D55FEF;
+  background: #e18af4;
 }
 .ant-slider-track, .ant-slider:hover .ant-slider-track {
-  background-color: #860EA1;
+  background-color: #D102FF;
   opacity: 0.75;
 }
 .ant-slider-track,
 .ant-slider ant-slider-track:hover {
-  background-color: #860EA1;
+  background-color: #D102FF;
   opacity: 0.75;
 }
 .ant-slider-dot-active,
 .ant-slider-handle,
 .ant-slider-handle-click-focused,
 .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open)  {
-  border: 2px solid #860EA1; 
+  border: 2px solid #D102FF; 
 }
 .ant-table-tbody > tr.ant-table-row:hover > td {
-  background: #D55FEF !important;
+  background: #bf41db !important;
 }
 .ant-table-tbody > tr > td {
   border-bottom: 8px solid #41034E;
@@ -52,16 +52,16 @@ input[type=number]:focus::-webkit-inner-spin-button {
   border-bottom: none;
 }
 .ant-divider-horizontal.ant-divider-with-text::before, .ant-divider-horizontal.ant-divider-with-text::after {
-  border-top: 1px solid #E495F5 !important;
+  border-top: 1px solid #ff8e44 !important;
 }
 .ant-layout {
-    background: #41034E
+    background: #5b056e
   }
   .ant-table {
-    background: #D102FF;
+    background: #8a1ca3;
   }
   .ant-table-thead > tr > th {
-    background: #860EA1;
+    background: #41034E;
   }
 .ant-select-item-option-content {
   img {
@@ -69,19 +69,19 @@ input[type=number]:focus::-webkit-inner-spin-button {
   }
 }
 .ant-modal-content {
-  background-color: #D102FF;
+  background-color: #8a1ca3;
 }
 
 @-webkit-keyframes highlight {
-  from { background-color: #D55FEF;}
+  from { background-color: #D102FF;}
   to {background-color: #41034E;}
 }
 @-moz-keyframes highlight {
-  from { background-color: #D55FEF;}
+  from { background-color: #D102FF;}
   to {background-color: #41034E;}
 }
 @-keyframes highlight {
-  from { background-color: #D55FEF;}
+  from { background-color: #D102FF;}
   to {background-color: #41034E;}
 }
 .flash {
@@ -90,11 +90,11 @@ input[type=number]:focus::-webkit-inner-spin-button {
   animation: highlight 0.5s ease 0s 1 alternate;
 }
 .ant-select-item-option-active:not(.ant-select-item-option-disabled),th.ant-table-column-sort{
-	background-color:#401681 !important;
+	background-color:#30043A !important;
 }
 .ant-table-tbody>tr.ant-table-placeholder:hover>td,.ant-table-thead th.ant-table-column-has-sorters:hover{
-	background-color:#3b1477 !important;
+	background-color:#bf41db !important;
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
-	background-color:#3b1477 !important;
+	background-color:#bf41db !important;
 }`;
